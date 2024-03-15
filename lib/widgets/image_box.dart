@@ -1,3 +1,4 @@
+import 'package:feeds/screens/second_screen.dart';
 import 'package:flutter/material.dart';
 
 class ImageBox extends StatelessWidget {
@@ -129,18 +130,23 @@ class ReadMore extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: width,
-      height: height,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(radius), color: Colors.white),
-      child: Center(
-        child: Text(
-          "Read More",
-          style: TextStyle(
-            fontSize: fontSize,
-            fontWeight: FontWeight.w700,
-            color: const Color(0xFF077BD8),
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>const SecondScreen(),),);
+      },
+      child: Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(radius), color: Colors.white),
+        child: Center(
+          child: Text(
+            "Read More",
+            style: TextStyle(
+              fontSize: fontSize,
+              fontWeight: FontWeight.w700,
+              color: const Color(0xFF077BD8),
+            ),
           ),
         ),
       ),

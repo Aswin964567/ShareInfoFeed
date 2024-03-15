@@ -76,7 +76,7 @@ class ReadBox extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         )
       ],
